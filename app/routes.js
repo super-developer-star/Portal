@@ -4,7 +4,7 @@
 // about the code splitting business
 
 import { logout } from 'scenes/App/actions/authActions';
-import { getAsyncInjectors } from './utils/asyncInjectors';
+// import { getAsyncInjectors } from './utils/asyncInjectors';
 
 const errorLoading = (err) => {
   console.error('Dynamic page loading failed', err); // eslint-disable-line no-console
@@ -16,11 +16,20 @@ const loadModule = (cb) => (componentModule) => {
 
 export default function createRoutes(store) {
   // create reusable async injectors using getAsyncInjectors factory
-  const { injectReducer, injectSagas } = getAsyncInjectors(store);
+  // const { injectReducer, injectSagas } = getAsyncInjectors(store);
 
   return [
     {
       path: '/',
+      name: 'Overview',
+      getComponent(nextState, cb) {
+        import('scenes/OverviewPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: '/fleet',
       name: 'Fleet Location',
       getComponent(nextState, cb) {
         import('scenes/FleetLocationsPage')

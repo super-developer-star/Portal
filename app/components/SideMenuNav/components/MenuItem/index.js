@@ -1,21 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 import styles from './menu-item.styl';
 
-const MenuItem = ({ children, iconComponent: IconComponent }) => (
+const MenuItem = ({ children, collapsed, to, iconComponent: IconComponent }) => (
   <li className={styles.container}>
-    <a href="/">
+    <Link to={to}>
       <IconComponent className={styles.image} />
-      <span>{children}</span>
-    </a>
+      {!collapsed && <span>{children}</span>}
+    </Link>
   </li>
 );
 MenuItem.propTypes = {
+  collapsed: PropTypes.bool,
   iconComponent: PropTypes.func,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
 };
 MenuItem.defaultProps = {
+  collapsed: false,
   iconComponent: () => null,
+  to: null,
 };
 
 export default MenuItem;

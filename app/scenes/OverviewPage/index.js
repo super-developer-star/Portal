@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import LocationMap from './components/LocationMap';
-import LocationTable from './components/LocationTable';
 
-class FleetLocationsPage extends Component {
+class OverviewPage extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
@@ -18,13 +16,11 @@ class FleetLocationsPage extends Component {
 
     return (
       <div>
-        View Airstream locations, click on map marker for details.
-        <LocationMap />
-        <LocationTable />
+        Realtime snapshot.
         {children}
       </div>
     );
   }
 }
 
-export default FleetLocationsPage;
+export default OverviewPage;

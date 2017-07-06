@@ -5,12 +5,11 @@ import { bindActionCreators } from 'redux';
 import * as authActions from 'scenes/App/actions/authActions';
 import * as appSelectors from 'scenes/App/selectors';
 import { Spinner, WindowShroud } from 'components/GeneralUI';
-import {InlineLogoPNG} from 'components/AirstreamLogo';
+import { InlineLogoPNG } from 'components/AirstreamLogo';
 import preventDefault from 'services/general/preventDefault';
 import cx from 'classnames';
 import styles from './auth-lock.styl';
 import backgroundImage from './login-background.jpg';
-import logo from './buddy-logo.svg';
 
 // NOTE: BusyMessage is declared up here because of stupid babel bugs.
 const BusyMessage = ({ children, spinner }) => (

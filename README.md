@@ -10,4 +10,5 @@ Portal using React-Boilerplate.
           }
         }
 
-3. npm start
+3. npm install
+4. npm start

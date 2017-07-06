@@ -1,58 +1,32 @@
 $bg-color = #0F6CA5;
-$item-bg-color = #08527E;
-$selected-item-bg-color = #08527E;
-$hamburger-icon-color = #08527E;
-$text-color = #fff;
 
 :local {
   .container {
+    height: 100%;
+  }
+
+  .menu-header {
+    height: 100px;
+  }
+
+  .items-container {
     font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: calc(100% - 100px);
     background-color: $bg-color;
+    width: 250px;
+
+    &.collapsed {
+      width: 53px;
+    }
 
     ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
-    }
-  }
-
-  .item {
-    width: 100%;
-    background-color: $item-bg-color;
-    color: $text-color;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    &.selected {
-      background-color: $selected-item-bg-color;
-    }
-
-    &:hover {
-      background-color: lighten($item-bg-color, 5%);
-      a {
-        text-decoration: none;
-      }
-    }
-
-    a {
-      color: $text-color;
-      text-decoration: none;
-      height: 100%;
-      width: 100%;
-      padding: 0.7em;
-    }
-
-    svg {
-      height: 1.9em;
-      width: 1.9em;
-      margin-right: 0.7em;
     }
   }
 }

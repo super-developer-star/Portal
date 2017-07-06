@@ -13,6 +13,7 @@ export default function SideMenuLayout({
 
   return (
     <div className={styles.container}>
+
       <aside className={cx(styles.side, { [styles.collapsed]: collapsed })}>
         <Menu collapsed={collapsed} />
       </aside>

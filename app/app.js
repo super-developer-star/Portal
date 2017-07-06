@@ -20,8 +20,10 @@ import 'sanitize.css/sanitize.css';
 
 // Import root app
 import App from 'scenes/App';
-// Import global styles.
+
+// Import all the global things.
 import 'assets/styles/common.styl';
+import 'font-awesome/css/font-awesome.min.css';
 
 // Import selector for `syncHistoryWithStore`
 import { makeSelectLocationState } from 'scenes/App/selectors';
