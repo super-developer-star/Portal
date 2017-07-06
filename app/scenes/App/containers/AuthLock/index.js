@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as authActions from 'scenes/App/actions/authActions';
 import * as appSelectors from 'scenes/App/selectors';
 import { Spinner, WindowShroud } from 'components/GeneralUI';
-import AirstreamLogo from 'components/AirstreamLogo';
+import {InlineLogoPNG} from 'components/AirstreamLogo';
 import preventDefault from 'services/general/preventDefault';
 import cx from 'classnames';
 import styles from './auth-lock.styl';
@@ -157,7 +157,7 @@ Panel.propTypes = {
 
 const LogoHeader = () => (
   <div className={styles.logoHeaderSection}>
-    <AirstreamLogo className={styles.logo} />
+    <InlineLogoPNG className={styles.logo} />
     <div className={styles.title}>Access your dashboard</div>
   </div>
 );
@@ -185,7 +185,7 @@ const LoginForm = ({ onSubmit, onInput, onForgotPasswordClicked }) => {
         </div>
 
         <PillButton>Login</PillButton>
-        <div className={styles.createAccountMessage}>Please contact <a href="mailto:sales@buddy.com">sales@buddy.com</a> to create an account.</div>
+        <div className={styles.createAccountMessage}>Please contact <a href="mailto:sales@buddy.com">{'<email>'}@airstream.com</a> to create an account.</div>
       </div>
     </form>
   );
@@ -226,9 +226,9 @@ PasswordResetForm.propTypes = {
 
 const CopyrightSection = () => (
   <div className={styles.copyrightSection}>
-    <a className={styles.link} href="http://www.buddy.com">www.buddy.com</a>
+    ©2017 Airstream, Inc.
     <br />
-    ©2017 Buddy Platform Ltd.
+    A subsidiary of Thor Industries, Inc. All Rights Reserved.
   </div>
 );
 

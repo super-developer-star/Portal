@@ -22,13 +22,13 @@
 
   .logo {
     display: block;
-    margin: auto;
+    margin: 30px 0px -10px 75px
     width: 60%;
     height: auto;
   }
 
   .title {
-    color: #00aeef;
+    color: #53BB4C;
     font-size: 16px;
     font-weight: 400;
     text-align: center;
@@ -52,15 +52,15 @@
       color: #000;
       margin: 0;
       display: inline-block;
-      width: 35%;
+      width: 30%;
       text-align: left;
       box-sizing: border-box;
       background-color: #fff;
-      padding: 17px 0 16px 20px;
+      padding: 10px 0 16px 20px;
       vertical-align: top;
       font-weight: 400;
       font-size: 14px;
-      height: 50px;
+      height: 40px;
       border-right: 1px solid #ebebeb;
       text-transform: none;
     }
@@ -69,7 +69,7 @@
       margin: 0;
       display: inline-block;
       background-color: #f8f8f8;
-      height: 50px;
+      height: 40px;
       width: 65%;
       font-weight: 400;
       font-size: 14px;
@@ -106,16 +106,17 @@
 
   .copyrightSection {
     text-align: center;
-    margin: 50px 0 20px 0;
+    margin: 40px 0 20px 0;
     color: #9d9fab;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .link {
     color: #9d9fab;
     font-size: 13px;
+    text-decoration: none;
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
       color: darken(#9d9fab, 20%);
     }
   }
@@ -128,29 +129,33 @@
   .pill-button {
     color: #fff;
     cursor: pointer;
-    background-color: rgb(0, 174, 239);
-    width: 60%;
+    background-color: #0F6CA5;
+    width: 50%;
     padding: 12px;
-    border-radius: 20px;
+    border-radius: 5px;
     text-transform: none;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 
     &:hover {
-      background-color: darken(rgb(0, 174, 239), 20%);
+      background-color: darken(#0F6CA5, 20%);
     }
 
     &:active {
-      background-color: darken(rgb(0, 174, 239), 40%);
+      background-color: darken(#0F6CA5, 40%);
     }
   }
 
   .create-account-message {
     font-size: 13px;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 -20px 80px;
+    width: 60%
     a {
       color: #00aeef;
-      text-decoration: underline;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
