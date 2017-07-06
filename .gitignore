@@ -1,0 +1,18 @@
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+stats.json
+.sass-lint.yml
+Dockerfile
+.dockerignore
+.eslintrc.json
+.gitattributes
+.jshintrc
+.stylintrc
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+

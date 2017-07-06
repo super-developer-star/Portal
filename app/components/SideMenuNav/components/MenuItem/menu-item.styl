@@ -1,0 +1,41 @@
+$item-bg-color = #08527E;
+$selected-item-bg-color = #08527E;
+$hamburger-icon-color = #08527E;
+$text-color = #BCE0E8;
+
+:local {
+  .container {
+    width: 100%;
+    background-color: $item-bg-color;
+    color: $text-color;
+
+    &.selected {
+      background-color: $selected-item-bg-color;
+    }
+
+    &:hover {
+      background-color: lighten($item-bg-color, 5%);
+      a {
+        text-decoration: none;
+      }
+    }
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      padding: 0.7em;
+
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .image {
+      height: 1.9em;
+      width: 1.9em;
+      margin-right: 0.7em;
+      fill: $text-color; // svg
+    }
+  }
+}

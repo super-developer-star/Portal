@@ -1,0 +1,81 @@
+:local {
+  .shroud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    background: #fcfcfc no-repeat center/100%
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    &.center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .spinner {
+    width: 8em;
+    height: 8em;
+    border: 0.5em solid rgb(0, 174, 239);
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: spin 1700ms infinite linear;
+       -o-animation: spin 1700ms infinite linear;
+       -ms-animation: spin 1700ms infinite linear;
+       -webkit-animation: spin 1700ms infinite linear;
+       -moz-animation: spin 1700ms infinite linear;
+
+    &.centered {
+      position: absolute;
+      top: calc(50% - 4em);
+      left: calc(50% - 4em);
+      margin: 0 auto;
+    }
+
+    &.dark {
+      background-color: #000;
+    }
+  }
+
+  @keyframes :local(spin) {
+  	100% {
+      transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes :local(spin) {
+  	100% {
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-ms-keyframes :local(spin) {
+  	100% {
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes :local(spin) {
+  	100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes :local(spin) {
+  	100% {
+      -moz-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}

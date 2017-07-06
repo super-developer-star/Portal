@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - "7"
+
+cache:
+  directories:
+   - $HOME/.nvm
+
+install:
+  - npm install
+
+before_script:
+  - npm run build
+
+script:
+  - npm run test
+
+deploy:
+  - provider: firebase
+    project: "airstream-portal"
+    skip_cleanup: true
+    on:
+      tags: true
+    token:
+      secure: "Cz05UsYZ/VDKtYCl4eZtBuVyjtenODlxc+cFpC+3baVPcsMgVIIlSYT83k5DK+Q0j57ioWtDbaCvjoFM2T6GbeRCB99hiPHe+Q8UWQ7BshDb+5J4G/8kalYlOD6m2iycXmPIxVVBGQ6n1LujFVb+WwvjBLj6XpOSW7uj3YoYDdcstxPZ6mK3dLc4sXhCmCZrWwPNgO7JguprcGAQpx6AnBVxoiFCzd3Y6vIGl3rqEVc3opKzrrzDK76hC2JMJiVTyfqYgaYBIUKODSk1SM8olpkP8lJScAQugYN+DmwgabMicx+Zez+lMTgTsqxQQqI3+u+t+s7dyekY/6eF04r7uVeSe/k4mXc0xR7Nteu5czWR8e6alp7rxLUYMMsfTxDCm7bIJxOv0JeLboT41yzWx+mFqdFrGN3s6ffMaBSPwn0kUAmXa3YRxRHHJhXPd9x1AnZ6xAVtVsTMyulMWEyLA6BILhkDveAsDXa5FCcINnXwxtWNcMv5y3hZOd9cqz5Xkfi58+epHCRbOs+vxAofmGwGC2VUadeBYwoOwaWmY4EZ1GPbo3sj2dywlTcXaGpQjjFb1XGaM9cgGf4a3XsnKNh6n7rRgwHQKXEFAgudkQHKcG3UH71WH5tjvPI1CYVF2Ql9yYvU6xZSBDGdoQmTU17g/5oSWZypm95quodu8x0="
+  - provider: firebase
+    project: "airstream-portal-staging"
+    skip_cleanup: true
+    on:
+      branch: master
+    token:
+      secure: "Cz05UsYZ/VDKtYCl4eZtBuVyjtenODlxc+cFpC+3baVPcsMgVIIlSYT83k5DK+Q0j57ioWtDbaCvjoFM2T6GbeRCB99hiPHe+Q8UWQ7BshDb+5J4G/8kalYlOD6m2iycXmPIxVVBGQ6n1LujFVb+WwvjBLj6XpOSW7uj3YoYDdcstxPZ6mK3dLc4sXhCmCZrWwPNgO7JguprcGAQpx6AnBVxoiFCzd3Y6vIGl3rqEVc3opKzrrzDK76hC2JMJiVTyfqYgaYBIUKODSk1SM8olpkP8lJScAQugYN+DmwgabMicx+Zez+lMTgTsqxQQqI3+u+t+s7dyekY/6eF04r7uVeSe/k4mXc0xR7Nteu5czWR8e6alp7rxLUYMMsfTxDCm7bIJxOv0JeLboT41yzWx+mFqdFrGN3s6ffMaBSPwn0kUAmXa3YRxRHHJhXPd9x1AnZ6xAVtVsTMyulMWEyLA6BILhkDveAsDXa5FCcINnXwxtWNcMv5y3hZOd9cqz5Xkfi58+epHCRbOs+vxAofmGwGC2VUadeBYwoOwaWmY4EZ1GPbo3sj2dywlTcXaGpQjjFb1XGaM9cgGf4a3XsnKNh6n7rRgwHQKXEFAgudkQHKcG3UH71WH5tjvPI1CYVF2Ql9yYvU6xZSBDGdoQmTU17g/5oSWZypm95quodu8x0="

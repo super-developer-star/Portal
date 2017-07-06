@@ -1,0 +1,36 @@
+:local {
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;  /*enables flex content for its children*/
+    flex-direction: row;
+  }
+
+  .side {
+    background: #ff69b4;
+    width: 250px;
+    background: hotpink;
+    transition: all .3s;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    &:collapsed {
+
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow-y: scroll;
+    background: green;
+
+    &:collapsed {
+
+    }
+  }
+}
