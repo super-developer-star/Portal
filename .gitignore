@@ -10,7 +10,7 @@ Dockerfile
 .gitattributes
 .jshintrc
 .stylintrc
-app/config/general.json
+app/config/**
 
 # Cruft
 .DS_Store
